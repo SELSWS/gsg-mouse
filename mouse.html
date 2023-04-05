@@ -1,0 +1,170 @@
+<!--교수님 코드 참고형 코드-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>이미지 마우스 클릭 랜덤 이동</title>
+    <style>
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid blue;
+            padding: 0px;
+        }
+    </style>
+    <script>
+        let select = 1; 
+        let img = new Image();
+        img.src = "media/donki.jpg";
+
+
+
+        function set() {
+            for (let i = 0; i < 100; i++) { // 안 보여도 10x10표 전체에 클릭시 이동되게
+                document.images[i].onclick = moveImage;
+                document.images[i].style.visibility = "hidden";
+            }
+            moveImage(); // moveImage(아래 서술될 함수) 실행
+        }
+
+        // 이미지 이동 함수
+        function moveImage() { 
+            document.images[select].src = ""; // 현재 <img>에 보여질 이미지 제거
+            document.images[select].style.visibility = "hidden"; // 현재 이미지를 보이지 않게 한다.
+            select = Math.floor(Math.random() * 100); // 0~99 사이의 랜덤한 셀 선택
+            document.images[select].src = img.src; // 새로 선택된 셀에 이미지 출력
+            document.images[select].style.visibility = "visible"; // 새로 이동하는 이미지를 보이게 한다.
+        }
+    </script>
+</head>
+
+<body onload="set()">
+    <h3>이미지 마우스 클릭 랜덤 이동</h3>
+    <hr>
+    <table>
+        <tbody> <!--테이블 10x10 생성-->
+            <tr> <!--1-->
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+            </tr>
+            <tr> <!--2-->
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+            </tr>
+            <tr> <!--3-->
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+            </tr>
+            <tr> <!--4-->
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+            </tr>
+            <tr> <!--5-->
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+            </tr>
+            <tr> <!--6-->
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+            </tr>
+            <tr> <!--7-->
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+            </tr>
+            <tr> <!--8-->
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+            </tr>
+            <tr> <!--9-->
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+            </tr>
+            <tr> <!--10-->
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+                <td><img src="" style="visibility: hidden;"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
